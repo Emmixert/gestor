@@ -4,48 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css"> 
+    
 </head>
 <body>
-    Tipo de evento:
-    <select name="Evento" >
-        <option value="1">Bautizo</option>
-        <option value="2">XV</option>
-        <option value="3">Boda</option>
-        <option value="4">Graduacion</option>
-        <option value="5">Cumpleaños</option>
-    </select><br>
 
-    <p>Selecciona una fecha:</p>
-<input type="date" id="datePicker">
-<label for="datePicker">Seleccionar fecha de reservacion</label> <br><br>
-
-    Requerimiento para ingreso <br>
-        <input type="radio" name="nivel" value="1">Invitacion <br>
-        <input type="radio" name="nivel" value="2">Credencial <br>
-        <input type="radio" name="nivel" value="3">Sin requerimientos<br><br>
-
-    Musica <br>
-        <input type="checkbox" name="Dj">DJ<br>
-        <input type="checkbox" name="En vivo">Musica en vivo<br><br>
-
+    <div class="container">
+        <div class="center">
+            <h1><strong>Reservación</strong></h1>
+        </div>
+        
+    </div>
    
-        Seleccione platillos <br>
-        Aperitivos <br>
-        <input type="checkbox" name="1">Sin aperitivos<br>
-        <input type="checkbox" name="2">Ensalada<br>
-        <input type="checkbox" name="3">Sashimi<br><br>
+    
+    <div class="container">
+        <div class="section">
+            <label for="tipoEvento"><strong>Tipo de evento:</strong></label><br>
+            <select name="tipoEvento" id="tipoEvento">
+                <option value="1">Bautizo</option>
+                <option value="2">XV</option>
+                <option value="3">Boda</option>
+                <option value="4">Graduación</option>
+                <option value="5">Cumpleaños</option>
+            </select><br><br>
 
-        Plato principal <br>
-        <input type="checkbox" name="1">Sin plato principal<br>
-        <input type="checkbox" name="2">Taquiza<br>
-        <input type="checkbox" name="3">Espaguetti<br><br>
+            <label for="fecha"><strong>Selecciona una fecha:</strong></label><br>
+            <input type="date" id="fecha" name="fecha"> <br><br>
 
-        Postre <br>
-        <input type="checkbox" name="1">Sin postre<br>
-        <input type="checkbox" name="2">Paletas<br>
-        <input type="checkbox" name="3">Churros<br><br>
+            <p><strong>Requerimiento para ingreso:</strong></p>
+            <input type="radio" name="nivel" value="1">Invitación<br>
+            <input type="radio" name="nivel" value="2">Credencial<br>
+            <input type="radio" name="nivel" value="3">Sin requerimientos
+        </div>
 
-        <input type="submit" value="Siguiente">
+               
+        <div class="section2">
+            <p><strong>Seleccione platillos:</strong></p>
+            <p><strong>Aperitivos:</strong></p>
+            <input type="checkbox" name="aperitivos" value="Sin aperitivos">Sin aperitivos<br>
+            <input type="checkbox" name="aperitivos" value="Ensalada">Ensalada<br>
+            <input type="checkbox" name="aperitivos" value="Sashimi">Sashimi<br><br>
+            <p><strong>Plato principal:</strong></p>
+            <input type="checkbox" name="platoPrincipal" value="Sin plato principal">Sin plato principal<br>
+            <input type="checkbox" name="platoPrincipal" value="Taquiza">Taquiza<br>
+            <input type="checkbox" name="platoPrincipal" value="Espaguetti">Espagueti<br><br>
+            <p><strong>Postre:</strong></p>
+            <input type="checkbox" name="postre" value="Sin postre">Sin postre<br>
+            <input type="checkbox" name="postre" value="Paletas">Paletas<br>
+            <input type="checkbox" name="postre" value="Churros">Churros
+
+            <br><br>
+            <p><strong>Música:</strong></p>
+            <input type="checkbox" name="musica" value="DJ">DJ<br>
+            <input type="checkbox" name="musica" value="En vivo">Música en vivo
+            <br><br>
+
+            <input type="submit" value="Siguiente" class="btn btn-primary me-md-2"><br><br>
+            <a href="inicio.html"><button class="btn btn-primary me-md-2" type="button">Cancelar</button></a>
+
+        </div>
+                      
+    </div>
+    
         
 
 </body>
