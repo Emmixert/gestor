@@ -2,7 +2,7 @@
 $servidor="localhost";
 $usuario="root";
 $clave="";
-$baseDeDatos="ggg_db";
+$baseDeDatos="ggg";
 
 $enlace= mysqli_connect ($servidor, $usuario, $clave, $baseDeDatos);
 ?>
@@ -55,10 +55,12 @@ $enlace= mysqli_connect ($servidor, $usuario, $clave, $baseDeDatos);
     </p>
 
         <form action="#" name="ejemplo2" method="post"><br>
-            Nombre: <input type="text" name="nombreCliente" placeholder="Nombre"><br>
-            Correo: <input type="email" name="correoCliente" placeholder="Correo"><br>
-            Telefono: <input type="text" name="telCliente" placeholder="Telefono"><br>
-            Contraseña: <input type="password" name="passCliente" placeholder="Contraseña"><br><br>
+            <h2><strong>Crear cuenta</strong></h2>
+            Nombre <br><input type="text" name="nombreCliente"><br>
+            Correo <br><input type="email" name="correoCliente"><br>
+            Telefono  <br><input type="text" name="telCliente"><br>
+            Contraseña <br><input type="password" name="passCliente"><br>
+            La contraseña debe contener al menos seis caracteres. <br><br>
 
             <input type="submit" name="registro">
             <input type="reset"><br><br>
@@ -77,7 +79,7 @@ $enlace= mysqli_connect ($servidor, $usuario, $clave, $baseDeDatos);
         $telCliente= $_POST['telCliente'];
         $passCliente= $_POST['passCliente'];
 
-        $insertarDatos="INSERT INTO clientes VALUES('','$nombreCliente','$correoCliente','$telCliente','$passCliente')";
+        $insertarDatos="INSERT INTO usuarios VALUES('','$nombreCliente','$telCliente','$correoCliente','$passCliente')";
 
         $ejecutarInsertar=mysqli_query($enlace, $insertarDatos);
     }
