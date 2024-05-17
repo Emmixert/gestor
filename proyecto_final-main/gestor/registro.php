@@ -84,7 +84,7 @@ if (isset($_POST['registro'])) {
     if ($stmt->execute()) {
         $stmt->close();
         // Redirect to another page, e.g., thank_you.php
-        header("Location: inicio.html");
+        header("Location: inicio.php");
         exit();
     } else {
         // Handle error
